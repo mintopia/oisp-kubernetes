@@ -1,20 +1,24 @@
-apiVersion: apps/v1
-kind: StatefulSet
+apiVersion: extensions/v1beta1
+kind: Deployment
 metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
   creationTimestamp: null
   generation: 1
   labels:
     app: hbase
   name: hbase
-  selfLink: /apis/apps/v1/namespaces/cloudfest/statefulsets/hbase
+  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest/deployments/hbase
 spec:
-  podManagementPolicy: OrderedReady
   replicas: 1
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: hbase
-  serviceName: hbase
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
   template:
     metadata:
       creationTimestamp: null
@@ -22,7 +26,7 @@ spec:
         app: hbase
     spec:
       containers:
-      - image: sbriscoeintel/platform-launcher:hbase
+      - image: dajobe/hbase
         imagePullPolicy: Always
         name: hbase
         ports:
@@ -41,25 +45,13 @@ spec:
         - mountPath: /data
           name: hbase-data
       dnsPolicy: ClusterFirst
+      hostname: hbase
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-  updateStrategy:
-    rollingUpdate:
-      partition: 0
-    type: RollingUpdate
-  volumeClaimTemplates:
-  - metadata:
-      creationTimestamp: null
-      name: hbase-data
-    spec:
-      accessModes:
-      - ReadWriteOnce
-      resources:
-        requests:
-          storage: 10Gi
-    status:
-      phase: Pending
-status:
-  replicas: 0
+      volumes:
+      - name: hbase-data
+        persistentVolumeClaim:
+          claimName: hbase-data
+status: {}

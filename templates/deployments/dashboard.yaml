@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "6"
+    deployment.kubernetes.io/revision: "7"
   creationTimestamp: null
   generation: 1
   labels:
@@ -38,7 +38,7 @@ spec:
         - "300"
         - --
         - ./wait-for-it.sh
-        - hbase-0:2181
+        - hbase:2181
         - -t
         - "300"
         - --

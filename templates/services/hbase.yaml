@@ -4,9 +4,10 @@ metadata:
   creationTimestamp: null
   labels:
     app: hbase
-  name: hbase-0
-  selfLink: /api/v1/namespaces/cloudfest/services/hbase-0
+  name: hbase
+  selfLink: /api/v1/namespaces/cloudfest/services/hbase
 spec:
+  clusterIP: None
   ports:
   - name: "2181"
     port: 2181

@@ -8,16 +8,16 @@ data:
     "mypostgres" }], "websocket-server": [{ "server-name": "websocket-server", "name":
     "mywsserver" }], "hbase": [{ "credentials": { "HADOOP_CONFIG_KEY": { "hadoop.security.authentication":
     "simple", "hadoop.security.authorization": "false", "hbase.security.authentication":
-    "simple", "ha.zookeeper.quorum": "hbase-0", "hbase.zookeeper.property.clientPort":
-    "2181", "hbase.zookeeper.quorum": "hbase-0" } }, "name": "myhbase" }], "hdfs":
-    [{ "credentials": { "HADOOP_CONFIG_KEY": { "ha.zookeeper.quorum": "hbase-0:2181",
-    "hadoop.security.authorization": "false" } }, "name": "myhdfs" }], "kafka": [{
-    "credentials": { "uri": "kafka:9092" }, "name": "mykafka" }], "zookeeper": [{
-    "credentials": { "zk.cluster": "kafka:2181", "zk.node": "/tmp" }, "label": "zookeeper",
-    "name": "myzookeeper", "plan": "local", "tags": [] }], "gearpump": [{ "credentials":
-    { "username": "admin", "password": "admin", "dashboardUrl": "gearpump:8090" },
-    "name": "mygearpump" }], "smtp": [ { "credentials": { "host": "smtp.sparkpostmail.com",
-    "port": "587", "protocol": "smtp", "username": "username", "password": "password"
+    "simple", "ha.zookeeper.quorum": "hbase", "hbase.zookeeper.property.clientPort":
+    "2181", "hbase.zookeeper.quorum": "hbase" } }, "name": "myhbase" }], "hdfs": [{
+    "credentials": { "HADOOP_CONFIG_KEY": { "ha.zookeeper.quorum": "hbase:2181", "hadoop.security.authorization":
+    "false" } }, "name": "myhdfs" }], "kafka": [{ "credentials": { "uri": "kafka:9092"
+    }, "name": "mykafka" }], "zookeeper": [{ "credentials": { "zk.cluster": "kafka:2181",
+    "zk.node": "/tmp" }, "label": "zookeeper", "name": "myzookeeper", "plan": "local",
+    "tags": [] }], "gearpump": [{ "credentials": { "username": "admin", "password":
+    "admin", "dashboardUrl": "gearpump:8090" }, "name": "mygearpump" }], "smtp": [
+    { "credentials": { "host": "smtp.example.com", "port": "587", "protocol":
+    "smtp", "username": "username", "password": "password"
     }, "label": "smtp", "name": "mysmtp" } ], "redis": [ { "credentials": { "hostname":
     "redis", "port": "6379", "password": "" }, "label": "redis", "name": "myredis"
     } ], "user-provided": [{ "credentials": { "kdc": "localhost", "kpassword": "pass",
