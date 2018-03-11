@@ -1,3 +1,4 @@
+#!/bin/sh
 cd templates
 for n in $(kubectl get -n cloudfest -o=name pvc,configmap,secret,ingress,service,deployment,statefulset,hpa)
 do
