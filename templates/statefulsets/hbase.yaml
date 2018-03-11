@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  creationTimestamp: null
+  generation: 1
+  labels:
+    app: hbase
+  name: hbase
+  selfLink: /apis/apps/v1/namespaces/cloudfest/statefulsets/hbase
+spec:
+  podManagementPolicy: OrderedReady
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: hbase
+  serviceName: hbase
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hbase
+    spec:
+      containers:
+      - image: sbriscoeintel/platform-launcher:hbase
+        imagePullPolicy: Always
+        name: hbase
+        ports:
+        - containerPort: 2181
+          protocol: TCP
+        - containerPort: 9090
+          protocol: TCP
+        - containerPort: 60000
+          protocol: TCP
+        - containerPort: 60020
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /data
+          name: hbase-data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  updateStrategy:
+    rollingUpdate:
+      partition: 0
+    type: RollingUpdate
+  volumeClaimTemplates:
+  - metadata:
+      creationTimestamp: null
+      name: hbase-data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      resources:
+        requests:
+          storage: 10Gi
+    status:
+      phase: Pending
+status:
+  replicas: 0

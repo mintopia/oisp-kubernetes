@@ -1,2 +1,1 @@
-# oisp-kubernetes
-Kubernetes Templates for OISP
+# Kubernetes Templates for OISP
