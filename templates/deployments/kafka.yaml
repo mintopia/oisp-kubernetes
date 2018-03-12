@@ -29,7 +29,7 @@ spec:
       - env:
         - name: ZK_CONNECT
           value: hbase:2181
-        image: spotify/kafkaproxy
+        image: spotify/kafka
         imagePullPolicy: Always
         name: kafka
         ports:

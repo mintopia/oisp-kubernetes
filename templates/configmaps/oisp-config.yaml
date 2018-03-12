@@ -15,7 +15,7 @@ data:
     }, "name": "mykafka" }], "zookeeper": [{ "credentials": { "zk.cluster": "kafka:2181",
     "zk.node": "/tmp" }, "label": "zookeeper", "name": "myzookeeper", "plan": "local",
     "tags": [] }], "gearpump": [{ "credentials": { "username": "admin", "password":
-    "admin", "dashboardUrl": "gearpump:8090" }, "name": "mygearpump" }], "smtp": [
+    "admin", "dashboardUrl": "localhost:8090" }, "name": "mygearpump" }], "smtp": [
     { "credentials": { "host": "smtp.example.com", "port": "587", "protocol": "smtp",
     "username": "username", "password": "password" }, "label": "smtp", "name": "mysmtp"
     } ], "redis": [ { "credentials": { "hostname": "redis", "port": "6379", "password":
