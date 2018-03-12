@@ -8,7 +8,7 @@ metadata:
   labels:
     app: kafka
   name: kafka
-  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest/deployments/kafka
+  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest-1/deployments/kafka
 spec:
   replicas: 1
   selector:

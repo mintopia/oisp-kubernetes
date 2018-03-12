@@ -5,7 +5,7 @@ metadata:
   labels:
     app: postgres
   name: postgres
-  selfLink: /api/v1/namespaces/cloudfest/services/postgres
+  selfLink: /api/v1/namespaces/cloudfest-1/services/postgres
 spec:
   ports:
   - name: "5432"

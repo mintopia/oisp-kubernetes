@@ -5,7 +5,7 @@ metadata:
     pv.kubernetes.io/bind-completed: "yes"
   creationTimestamp: null
   name: postgres-data
-  selfLink: /api/v1/namespaces/cloudfest/persistentvolumeclaims/postgres-data
+  selfLink: /api/v1/namespaces/cloudfest-1/persistentvolumeclaims/postgres-data
 spec:
   accessModes:
   - ReadWriteOnce

@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hbase
   name: hbase
-  selfLink: /api/v1/namespaces/cloudfest/services/hbase
+  selfLink: /api/v1/namespaces/cloudfest-1/services/hbase
 spec:
   clusterIP: None
   ports:

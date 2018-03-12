@@ -8,7 +8,7 @@ metadata:
   labels:
     app: gearpump
   name: gearpump
-  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest/deployments/gearpump
+  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest-1/deployments/gearpump
 spec:
   replicas: 1
   selector:

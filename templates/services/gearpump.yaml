@@ -5,7 +5,7 @@ metadata:
   labels:
     app: gearpump
   name: gearpump
-  selfLink: /api/v1/namespaces/cloudfest/services/gearpump
+  selfLink: /api/v1/namespaces/cloudfest-1/services/gearpump
 spec:
   ports:
   - name: "8090"

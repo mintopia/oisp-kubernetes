@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   name: kafka
-  selfLink: /api/v1/namespaces/cloudfest/services/kafka
+  selfLink: /api/v1/namespaces/cloudfest-1/services/kafka
 spec:
   ports:
   - name: kafka

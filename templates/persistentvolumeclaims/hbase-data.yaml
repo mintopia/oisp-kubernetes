@@ -5,7 +5,7 @@ metadata:
     pv.kubernetes.io/bind-completed: "yes"
   creationTimestamp: null
   name: hbase-data
-  selfLink: /api/v1/namespaces/cloudfest/persistentvolumeclaims/hbase-data
+  selfLink: /api/v1/namespaces/cloudfest-1/persistentvolumeclaims/hbase-data
 spec:
   accessModes:
   - ReadWriteOnce

@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   name: redis
-  selfLink: /api/v1/namespaces/cloudfest/services/redis
+  selfLink: /api/v1/namespaces/cloudfest-1/services/redis
 spec:
   ports:
   - name: "6379"

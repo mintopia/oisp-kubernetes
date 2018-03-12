@@ -2,13 +2,13 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "4"
+    deployment.kubernetes.io/revision: "1"
   creationTimestamp: null
   generation: 1
   labels:
     app: postgres
   name: postgres
-  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest/deployments/postgres
+  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest-1/deployments/postgres
 spec:
   replicas: 1
   selector:

@@ -5,7 +5,7 @@ metadata:
   labels:
     app: websocket-server
   name: websocket-server
-  selfLink: /api/v1/namespaces/cloudfest/services/websocket-server
+  selfLink: /api/v1/namespaces/cloudfest-1/services/websocket-server
 spec:
   ports:
   - name: "5000"

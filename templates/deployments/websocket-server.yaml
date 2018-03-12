@@ -2,13 +2,13 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "2"
+    deployment.kubernetes.io/revision: "1"
   creationTimestamp: null
   generation: 1
   labels:
     app: websocket-server
   name: websocket-server
-  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest/deployments/websocket-server
+  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest-1/deployments/websocket-server
 spec:
   replicas: 1
   selector:

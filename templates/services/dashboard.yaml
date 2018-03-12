@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dashboard
   name: dashboard
-  selfLink: /api/v1/namespaces/cloudfest/services/dashboard
+  selfLink: /api/v1/namespaces/cloudfest-1/services/dashboard
 spec:
   ports:
   - name: "4001"
