@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  creationTimestamp: null
+  generation: 1
+  name: dashboard-web
+  selfLink: /apis/extensions/v1beta1/namespaces/cloudfest-1/ingresses/dashboard-web
+spec:
+  rules:
+  - host: iot.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: dashboard
+          servicePort: 4001
+status:
+  loadBalancer: {}
