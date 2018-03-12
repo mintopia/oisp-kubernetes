@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
   creationTimestamp: null
   generation: 1
   labels:
@@ -61,10 +61,10 @@ spec:
           readOnly: true
         workingDir: /app
       dnsPolicy: ClusterFirst
+      hostname: websocket-server
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
-      hostname: websocket-server
       terminationGracePeriodSeconds: 30
       volumes:
       - name: jwt-keys

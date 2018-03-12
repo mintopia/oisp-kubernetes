@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
+    nginx.org/proxy-buffering: "false"
   creationTimestamp: null
   generation: 1
   name: dashboard-web
